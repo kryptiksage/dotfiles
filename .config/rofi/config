@@ -1,0 +1,27 @@
+! ------------------------------------------------------------------------------
+!                      ROFI Settings
+! ------------------------------------------------------------------------------
+
+! General
+rofi.font:				  MesloLGS NF 10                
+rofi.fake-transparency:   true
+rofi.hide-scrollbar:      true
+
+
+! Layout
+rofi.width:              28
+rofi.column:             7
+rofi.location:           0
+rofi.lines:              8
+rofi.padding:            10
+rofi.sidebar-mode:       false
+rofi.fullscreen:         false
+
+! ------------------------------------------------------------------------------
+!                      ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #393939, #393939, #268bd2
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
