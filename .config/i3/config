@@ -221,3 +221,6 @@ bindsym Print exec scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png
 
 # Compton
 exec_always --no-startup-id compton
+
+# Bluetooth
+# bindsym $mod+b exec ~/.config/i3/bluet.sh 
