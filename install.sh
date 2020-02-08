@@ -19,3 +19,6 @@ source $HOME/.zshrc 2>/dev/null
 
 # Apply .Xresources
 xrdb .Xresources
+
+# i3
+i3-msg restart
