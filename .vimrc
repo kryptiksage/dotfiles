@@ -3,3 +3,8 @@ set number
 set ruler
 set laststatus=2
 set visualbell
+set autoindent
+set tabstop=4
+set hlsearch
+set incsearch
+set statusline=2
