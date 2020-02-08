@@ -17,6 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
 source $HOME/.zshrc 2>/dev/null
 
+chmod +x $HOME/.config/i3/bluet.sh
 # Apply .Xresources
 xrdb .Xresources
 
