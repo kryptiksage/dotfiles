@@ -7,4 +7,4 @@ set autoindent
 set tabstop=4
 set hlsearch
 set incsearch
-set statusline=2
+set noswapfile
