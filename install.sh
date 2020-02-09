@@ -17,7 +17,28 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
 source $HOME/.zshrc 2>/dev/null
 
+# Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
+
+# Switch default displays
+cp .xprofile $HOME/.xprofile
+read -p 'Switch to HDMI (y/n) : ' display
+while true
+do
+	case $display in
+		y | Y)
+		echo "export $DISP_VAR=$(xrandr --output eDP-1 --off --output HDMI-1 --primary)" > $HOME/.xprofile
+		echo Display set to HDMI
+		break
+		;;
+		n | N)
+		echo Display set to default
+		break
+		;;
+	esac
+done
+source $HOME/.xprofile
+
 # Apply .Xresources
 xrdb .Xresources
 
