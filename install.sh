@@ -27,7 +27,7 @@ while true
 do
 	case $display in
 		y | Y)
-		echo export DISP_VAR='"$(xrandr --output eDP-1 --off --output HDMI-1 --primary)"' > $HOME/.xprofile
+		echo export DISP_VAR='"$(xrandr --output eDP1 --off --output HDMI1 --primary)"' > $HOME/.xprofile
 		echo Display set to HDMI
 		break
 		;;
