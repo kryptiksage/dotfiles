@@ -208,6 +208,7 @@ focus_follows_mouse no
 # i3-gaps
 gaps inner  5
 gaps outer  5
+gaps bottom 0
 # smart_gaps on
 
 # Polybar
