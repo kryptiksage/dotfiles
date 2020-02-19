@@ -1,5 +1,15 @@
 #!/bin/bash
 
+packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picomi reflector)
+
+# Install essential packages
+sudo pacman -S $packages
+
+# zsh
+echo "Switching to zsh"
+[ $(echo $SHELL) != /bin/zsh/ ] && chsh -s /bin/zsh
+echo "Changed shell to zsh"
+
 sym=( .vimrc .Xresources .zshrc .fonts .config/{i3,polybar,rofi} .p10k.zsh )
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
@@ -13,7 +23,7 @@ done
 # Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k 2>/dev/null
 
-# zsh
+# zsh-plugins
 sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
 
 # Bluetooth
@@ -27,7 +37,7 @@ while true
 do
 	case $display in
 		y | Y)
-		echo export DISP_VAR='"$(xrandr --output eDP-1 --off --output HDMI-1 --primary)"' > $HOME/.xprofile
+		echo export DISP_VAR='"$(xrandr --output eDP1 --off --output HDMI1 --primary)"' > $HOME/.xprofile
 		echo Display set to HDMI
 		break
 		;;

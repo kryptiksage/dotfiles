@@ -1,1 +1,1 @@
-DISP_VAR="$(xrandr --output eDP-1 --primary)"
+DISP_VAR="$(xrandr --output eDP1 --primary)"
