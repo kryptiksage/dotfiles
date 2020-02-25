@@ -22,8 +22,8 @@ alias ls="ls -a --color=auto"
 alias ...="cd ../.."
 alias rank-mirrors="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
 
-# Delete Key Fix
-bindkey "^[[3~" delete-char
-
 # vi mde
 bindkey -v
+
+# Delete Key Fix
+bindkey -a "^[[3~" delete-char
