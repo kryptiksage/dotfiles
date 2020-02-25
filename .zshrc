@@ -22,7 +22,7 @@ alias ls="ls -a --color=auto"
 alias ...="cd ../.."
 alias rank-mirrors="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
 
-# vi mde
+# vi mode
 bindkey -v
 
 # Delete Key Fix
