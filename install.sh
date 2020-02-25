@@ -3,7 +3,10 @@
 packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picomi reflector)
 
 # Install essential packages
-sudo pacman -S $packages
+for i in "${packages[@]}"
+do
+	[ $(pacman -Qq $i 2>/dev/null | wc -l) -eq 0 ] && sudo pacman -S $i 
+done
 
 # zsh
 echo "Switching to zsh"
