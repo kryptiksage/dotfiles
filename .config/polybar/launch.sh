@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# network
+export WLAN=$(ip link | grep wlp | awk -F ": " '{print $2}')
+export ETH=$(ip link | grep enp | awk -F ": " '{print $2}')
+
 killall -qw polybar
 
 # Launch bars top and bottom
