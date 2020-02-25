@@ -24,3 +24,6 @@ alias rank-mirrors="sudo reflector --latest 200 --protocol http --protocol https
 
 # Delete Key Fix
 bindkey "^[[3~" delete-char
+
+# vi mde
+bindkey -v
