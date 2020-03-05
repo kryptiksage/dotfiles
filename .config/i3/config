@@ -215,7 +215,7 @@ gaps bottom 0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/neon_shallows.png
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.png
 
 # Screenshot
 bindsym Print exec scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png
