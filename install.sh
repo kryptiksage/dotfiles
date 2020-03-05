@@ -49,6 +49,9 @@ do
 done
 source $HOME/.xprofile
 
+# Wallpaper
+cp $(pwd)/wallpaper.jpg $HOME/Pictures/
+
 # Apply .Xresources
 xrdb .Xresources
 
