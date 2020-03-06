@@ -20,7 +20,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Alias
 alias ls="ls -a --color=auto"
 alias ...="cd ../.."
-alias rank-mirrors="sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
+alias rank-mirrors="sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
 
 # vi mode
 bindkey -v
