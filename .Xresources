@@ -55,7 +55,7 @@
 
 !! URxvt Appearance
 URxvt*termName:		rxvt-unicode-256color
-URxvt.font:		xft:MesloLGS NF:style=Regular:size=8 
+URxvt.font:		xft:MesloLGS NF:style=Regular:size=10
 URxvt.letterSpace:	0
 URxvt.lineSpace: 	0
 URxvt.geometry: 	92x24
