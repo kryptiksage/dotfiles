@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code)
 
