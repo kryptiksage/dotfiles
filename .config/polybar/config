@@ -53,7 +53,7 @@ modules-left = i3
 modules-right = backlight pulseaudio wireless-network wired-network battery date powermenu
 
 !! Tray icons
-tray-position = right
+tray-position = center
 tray-background = ${root.background}
 tray-padding = 0
 
