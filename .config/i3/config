@@ -187,14 +187,14 @@ exec --no-startup-id $DISP_VAR
 workspace 1 output primary
 
 assign [class="URxvt"] 1
-assign [class="firefox"] 2
+assign [class="qutebrowser"] 2
 assign [class="Thunar"] 3
 assign [class="vlc"] 4
 assign [class="code"] 5
 # Keyboard shortcuts
 bindsym $mod+Enter exec urxvt
 bindsym $mod+t exec thunar
-bindsym $mod+f exec firefox
+bindsym $mod+f exec qutebrowser
 
 # Border
 for_window [class=".*"] border pixel 0
