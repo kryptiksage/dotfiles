@@ -32,7 +32,7 @@ height = 27
 background = #00000000
 foreground = #ccffffff
 
-line-color = ${bar/top.background}
+line-color = ${root.background}
 line-size = 2
 
 spacing = 3
@@ -51,6 +51,11 @@ font-7 = Termsynu:size=8:antialias=false;0
 
 modules-left = i3
 modules-right = backlight pulseaudio wireless-network wired-network battery date powermenu
+
+!! Tray icons
+tray-position = right
+tray-background = ${root.background}
+tray-padding = 0
 
 [module/backlight]
 type = internal/xbacklight
