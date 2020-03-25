@@ -1,11 +1,16 @@
 #!/bin/sh
 
-packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k) 
+packages=(zsh rxvt-unicode xf86-video-intel i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k) 
 
-# Install essential packages
+## Install essential packages
+# i3 install
+sudo pacman -R i3-gaps 2>/dev/null
+git clone https://aur.archlinux.org/i3-gaps-rounded-git.git # i3-gaps frok
+cd i3-gaps-rounded-git
+makepkg -si 
 for i in "${packages[@]}"
 do
-	[ $(pacman -Qq $i 2>/dev/null | wc -l) -eq 0 ] && sudo pacman -S $i 
+	[ -z $(pacman -Qq $i 2>/dev/null) ] && sudo pacman -S $i 
 done
 
 # zsh
