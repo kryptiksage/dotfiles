@@ -10,7 +10,7 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 
 # Powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Plugins
