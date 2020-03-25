@@ -8,7 +8,7 @@ curl -s -L https://git.io/JvyrA | bash
 ## Install essential packages
 for i in "${packages[@]}"
 do
-	[ -z $(pacman -Qq $i 2>/dev/null) ] && sudo pacman -S $i 
+	[ -z $(pacman -Qq $i 2>/dev/null) ] && sudo pacman -S --noconfirm $i 
 done
 
 # zsh
