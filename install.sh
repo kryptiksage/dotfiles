@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth) 
+packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k) 
 
 # Install essential packages
 for i in "${packages[@]}"
@@ -22,9 +22,6 @@ do
 	[ -e $HOME/$i ] && rm -rf $HOME/$i
 	ln -s $(pwd)/$i $HOME/$i
 done
-
-# Powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k 2>/dev/null
 
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
