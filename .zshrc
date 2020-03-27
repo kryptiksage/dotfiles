@@ -22,6 +22,7 @@ alias ls="ls -a --color=auto"
 alias ...="cd ../.."
 alias rank-mirrors="sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
 alias wifi="nmcli device wifi connect"
+alias poweroff="poweroff || sudo systemctl poweroff"
 
 # vi mode
 bindkey -v
