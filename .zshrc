@@ -1,6 +1,8 @@
 # Auto
 autoload -U compinit; compinit
 setopt autocd autopushd
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 
 # History
 export HISTSIZE=10000
