@@ -194,7 +194,7 @@ assign [class="code"] 5
 bindsym $mod+Enter exec urxvt
 bindsym $mod+t exec thunar
 bindsym $mod+f exec firefox
-bindsym $mod+tab workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 
 # Border
 for_window [class=".*"] border pixel 0
