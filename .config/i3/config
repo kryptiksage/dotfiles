@@ -188,10 +188,9 @@ workspace 1 output primary
 
 assign [class="URxvt"] 1
 assign [class="firefox"] 2
-assign [class="code"] 3
+assign [class="Thunar"] 3
 assign [class="vlc"] 4
-assign [cass="Thunar"] 5
-
+assign [class="code"] 5
 # Keyboard shortcuts
 bindsym $mod+Enter exec urxvt
 bindsym $mod+t exec thunar
