@@ -184,14 +184,14 @@ exec --no-startup-id $DISP_VAR
 # Workspaces
 workspace 1 output primary
 
-assign [class="URxvt"] 1
+assign [class="st"] 1
 assign [class="firefox"] 2
 assign [class="Thunar"] 3
 assign [class="vlc"] 4
 assign [class="code"] 5
 
 # Keyboard shortcuts
-bindsym $mod+Enter exec urxvt
+bindsym $mod+Enter exec st
 bindsym $mod+t exec thunar
 bindsym $mod+f exec firefox
 bindsym $mod+Tab workspace back_and_forth
