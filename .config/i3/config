@@ -6,6 +6,8 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# st terminal
+set $term --no-startup-id $TERMINAL
 
 set $mod Mod1
 
@@ -191,7 +193,7 @@ assign [class="vlc"] 4
 assign [class="code"] 5
 
 # Keyboard shortcuts
-bindsym $mod+Enter exec st
+bindsym $mod+Enter exec $term
 bindsym $mod+t exec thunar
 bindsym $mod+f exec firefox
 bindsym $mod+Tab workspace back_and_forth
