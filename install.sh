@@ -27,8 +27,8 @@ do
 done
 
 # st
-mkdir -p $HOME/.cache 
-git clone https://github.com/kryptiksage/st.git $HOME/.cache/st || (cd $HOME/.cache/st ;; git pull)
+mkdir -p $HOME/.config
+git clone https://github.com/kryptiksage/st.git $HOME/.config/st || (cd $HOME/.cache/st ;; git pull)
 cd $HOME/.cache/st
 echo "Installing st..."
 sudo make clean install
