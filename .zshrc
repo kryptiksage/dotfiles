@@ -31,3 +31,5 @@ bindkey -v
 
 # Delete Key Fix
 bindkey -v "^[[3~" delete-char
+
+tput smkx
