@@ -30,6 +30,4 @@ alias poweroff="poweroff 2> /dev/null || sudo systemctl poweroff"
 bindkey -v
 
 # Delete Key Fix
-bindkey -v "^[[3~" delete-char
-
-tput smkx
+bindkey -v "^[[P" delete-char
