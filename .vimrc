@@ -6,7 +6,6 @@ endif
 syntax on
 
 set number
-set ruler
 
 set cursorline
 highlight clear CursorLineNR 
