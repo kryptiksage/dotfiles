@@ -16,7 +16,7 @@ echo "Switching to zsh"
 [ $(echo $SHELL) != /bin/zsh ] && chsh -s /bin/zsh
 echo "Changed shell to zsh"
 
-sym=( .vimrc .Xresources .zshrc .fonts .config/{i3,polybar,rofi} .p10k.zsh )
+sym=( .vimrc .vim .Xresources .zshrc .fonts .config/{i3,polybar,rofi} .p10k.zsh )
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 # Symlink after deleting existing
