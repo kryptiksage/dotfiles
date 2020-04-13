@@ -12,8 +12,6 @@ highlight clear CursorLineNR
 highlight clear CursorLine
 highlight CursorLineNR ctermfg=red
 
-"set visualbell
-
 set autoindent
 set tabstop=4
 
