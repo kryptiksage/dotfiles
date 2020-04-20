@@ -7,8 +7,3 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 set rnu
-
-set cursorline
-highlight clear CursorLineNR
-highlight clear CursorLine
-highlight CursorLineNR ctermfg=red
