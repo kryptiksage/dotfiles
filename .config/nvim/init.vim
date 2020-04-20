@@ -5,3 +5,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 call plug#end()
+
+set nu
+set cursorline
+highlight clear CursorLineNR
+highlight clear CursorLine
+highlight CursorLineNR ctermfg=red
