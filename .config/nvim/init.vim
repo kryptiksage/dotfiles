@@ -6,7 +6,7 @@ endif
 call plug#begin('~/.vim/plugged')
 call plug#end()
 
-set nu
+set rnu
 
 set cursorline
 highlight clear CursorLineNR
