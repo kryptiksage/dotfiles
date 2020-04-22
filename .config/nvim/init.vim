@@ -12,3 +12,4 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set rnu
+set splitright
