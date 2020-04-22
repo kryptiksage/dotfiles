@@ -13,3 +13,6 @@ call plug#end()
 
 set rnu
 set splitright
+
+" Autocmd
+autocmd BufWritePost *Xresources !xrdb %
