@@ -16,3 +16,10 @@ set splitright
 
 " Autocmd
 autocmd BufWritePost *Xresources !xrdb %
+
+" Autocomplete
+inoremap ( ()<left>
+inoremap { {}<left>
+inoremap [ []<left>
+inoremap ' ''<left>
+inoremap " ""<left>
