@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/home/kryptiksage'
-let g:netrw_dirhist_3='/home/kryptiksage/Documents/dotfiles'
-let g:netrw_dirhist_2='/home/kryptiksage/Documents/kop'
-let g:netrw_dirhist_1='/home/kryptiksage/.config/polybar'
