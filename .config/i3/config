@@ -7,7 +7,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # st terminal
-set $term --no-startup-id $TERMINAL
+set $term --no-startup-id $TERM
 
 set $mod Mod1
 
