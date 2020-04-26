@@ -31,6 +31,8 @@ git clone https://github.com/kryptiksage/st.git $HOME/.config/st || (cd $HOME/.c
 cd $HOME/.config/st
 echo "Installing st..."
 sudo make clean install
+[ -f $HOME/.zshenv ] && sed -i '/export TERM*/d' $HOME/.zshenv
+echo ""TERM=st-256color"" >> $HOME/.zshenv
 
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
