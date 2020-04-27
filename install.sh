@@ -40,6 +40,9 @@ cd $HOME/.config/dwn
 echo "Installing dwn..."
 sudo make clean install
 
+# neovim
+nvim +PlugInstall +q +q
+
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
 
