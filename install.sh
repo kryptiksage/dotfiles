@@ -34,6 +34,12 @@ sudo make clean install
 [ -f $HOME/.zshenv ] && sed -i '/export TERMINAL*/d' $HOME/.zshenv
 echo TERMINAL=st >> $HOME/.zshenv
 
+# dwm
+git clone https://github.com/kryptiksage/dwm.git $HOME/.config/dwm || (cd $HOME/.config/dwm ; git pull)
+cd $HOME/.config/dwn
+echo "Installing dwn..."
+sudo make clean install
+
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
 
