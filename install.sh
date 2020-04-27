@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf)
+packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn)
 
 # Install kop
 curl -s -L https://git.io/JvyrA | bash
@@ -42,7 +42,7 @@ sudo make clean install
 
 # neovim
 source $HOME/.config/nvim/init.vim
-nvim +PlugInstall +q +q
+nvim +PlugInstall +"call coc#util#install()" +q +q
 
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
