@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Rust
+Plug 'neoclide/coc.nvim'
 call plug#end()
 
 set rnu
