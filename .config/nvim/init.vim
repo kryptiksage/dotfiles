@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Rust
 Plug 'neoclide/coc.nvim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set rnu
