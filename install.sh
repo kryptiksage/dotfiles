@@ -41,6 +41,7 @@ echo "Installing dwn..."
 sudo make clean install
 
 # neovim
+source $HOME/.config/nvim/init.vim
 nvim +PlugInstall +q +q
 
 # Bluetooth
