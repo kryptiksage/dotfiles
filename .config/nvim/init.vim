@@ -19,6 +19,7 @@ set splitright
 
 " Autocmd
 autocmd BufWritePost *Xresources !xrdb %
+autocmd BufWritePost init.vim source ~/.config/nvim/init.vim
 
 " Autocomplete
 inoremap ( ()<left>
