@@ -44,6 +44,7 @@ sudo make clean install
 source $HOME/.config/nvim/init.vim
 nvim +PlugInstall +"call coc#util#install()" +q +q
 nvim +"CocInstall coc-rust-analyzer" +q +q
+
 # Bluetooth
 chmod +x $HOME/.config/i3/bluet.sh
 
