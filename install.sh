@@ -40,7 +40,11 @@ cd $HOME/.config/dwn
 echo "Installing dwn..."
 sudo make clean install
 
-# neovim
+## neovim
+# rust
+mkdir -p $HOME/.cache/kop 2>/dev/null
+git clone https://aur.archlinux.org/rust-analyzer-bin.git $HOME/.cache/kop/rust-analyzer-bin
+cd $HOME/.cache/kop/rust-analyzer-bin ; makepkg -si 
 source $HOME/.config/nvim/init.vim
 nvim +PlugInstall +"call coc#util#install()" +q +q
 nvim +"CocInstall coc-rust-analyzer" +q +q
