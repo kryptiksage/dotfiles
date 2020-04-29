@@ -6,7 +6,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Color scheme
-Plug 'kryptiksage/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " vim-airline
 Plug 'vim-airline/vim-airline'
