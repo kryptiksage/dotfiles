@@ -18,7 +18,6 @@ Plug 'rust-lang/rust.vim'
 call plug#end()
 
 colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
 
 set rnu
 set nu
