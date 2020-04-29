@@ -21,6 +21,7 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 
 set rnu
+set nu
 set splitright
 
 " Autocmd
