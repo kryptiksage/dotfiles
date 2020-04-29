@@ -5,6 +5,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Color scheme
+Plug 'morhetz/gruvbox'
+
 " vim-airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -13,6 +16,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim'
 Plug 'rust-lang/rust.vim'
 call plug#end()
+
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 
 set rnu
 set splitright
