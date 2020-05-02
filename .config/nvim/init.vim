@@ -34,3 +34,6 @@ inoremap { {}<left>
 inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
+
+" Terminal
+tnoremap <Esc> <C-\><C-n>
