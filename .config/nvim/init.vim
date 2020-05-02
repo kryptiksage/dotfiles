@@ -28,12 +28,5 @@ set splitright
 autocmd BufWritePost *Xresources !xrdb %
 autocmd BufWritePost *init.vim source ~/.config/nvim/init.vim
 
-" Autocomplete
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
-inoremap ' ''<left>
-inoremap " ""<left>
-
 " Terminal
 tnoremap <Esc> <C-\><C-n>
