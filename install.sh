@@ -45,6 +45,7 @@ sudo make clean install
 rustup default stable
 source $HOME/.config/nvim/init.vim 2>/dev/null
 nvim +PlugInstall +"call coc#util#install()" +q +q
+cd $HOME/.config/nvim/plugged/coc.nvim ; yarn install
 nvim +"CocInstall coc-rust-analyzer" +q +q
 
 # Bluetooth
