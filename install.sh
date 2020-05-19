@@ -42,9 +42,6 @@ sudo make clean install
 
 ## neovim
 # rust
-mkdir -p $HOME/.cache/kop 2>/dev/null
-git clone https://aur.archlinux.org/rust-analyzer-bin.git $HOME/.cache/kop/rust-analyzer-bin
-cd $HOME/.cache/kop/rust-analyzer-bin ; makepkg -si 
 source $HOME/.config/nvim/init.vim 2>/dev/null
 nvim +PlugInstall +"call coc#util#install()" +q +q
 nvim +"CocInstall coc-rust-analyzer" +q +q
