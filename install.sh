@@ -72,6 +72,7 @@ done
 source $HOME/.xprofile
 
 # Wallpaper
+mkdir $HOME/Pictures
 cp $(pwd)/wallpaper.jpg $HOME/Pictures/
 
 # Apply .Xresources
