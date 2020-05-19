@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn)
+packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn rustup rust-analyzer-bin)
 
 # Install kop
 curl -s -L https://git.io/JvyrA | bash
@@ -42,6 +42,7 @@ sudo make clean install
 
 ## neovim
 # rust
+rustup default stable
 source $HOME/.config/nvim/init.vim 2>/dev/null
 nvim +PlugInstall +"call coc#util#install()" +q +q
 nvim +"CocInstall coc-rust-analyzer" +q +q
