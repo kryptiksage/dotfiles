@@ -2,6 +2,8 @@
 
 packages=(zsh rxvt-unicode xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn rustup rust-analyzer-bin feh lxappearance telegram-desktop qbittorrent)
 
+DOT_DIR=$(pwd)
+
 # Install kop
 curl -s -L https://git.io/JvyrA | bash
 
@@ -33,6 +35,7 @@ echo "Installing st..."
 sudo make clean install
 [ -f $HOME/.zshenv ] && sed -i '/export TERMINAL*/d' $HOME/.zshenv
 echo TERMINAL=st >> $HOME/.zshenv
+sudo cp $DOT_DIR/st.desktop /usr/share/applications/
 
 # dwm
 git clone https://github.com/kryptiksage/dwm.git $HOME/.config/dwm || (cd $HOME/.config/dwm ; git pull)
