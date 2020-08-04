@@ -18,7 +18,7 @@ echo "Switching to zsh"
 [ $(echo $SHELL) != /bin/zsh ] && chsh -s /bin/zsh
 echo "Changed shell to zsh"
 
-sym=( .zshrc .fonts .config/{mpv,nvim} .p10k.zsh )
+sym=( .zshrc .fonts .config/{mpv,nvim,sway} .p10k.zsh )
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 # Symlink after deleting existing
