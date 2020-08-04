@@ -1,3 +1,13 @@
+# Font
+font:
+        size: 10
+        normal:
+                family: MesloLGS NF
+                style: Regular
+        bold:
+                family: MesloLGS NF
+        italic:
+                family: MesloLGS NF
 # Padding
 window:
         padding:
