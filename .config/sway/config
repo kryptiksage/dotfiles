@@ -1,4 +1,4 @@
-# Default config for sway
+
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -84,12 +84,12 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
-# Moving around:
+
 #
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
+    
     bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
@@ -149,7 +149,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    # bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -201,17 +201,32 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
+
+# Assign Workspaces
+assign [class="alacritty"] 1
+assign [class="firefox"] 2
+assign [class="nautilus"] 3
+assign [class="code"] 5
+
+# Shortcuts
+bindsym $mod+t exec nautilus
+bindsym $mod+f exec firefox
+
+# Focus
+focus_follows_mouse no
+
+# Border
+for_window [class=".*"] border pixel 0
+hide_edge_borders both
+default_border none
+default_floating_border none
+
+# Gaps
+gaps inner 5
+gaps outer 5
+gaps bottom 0
+
