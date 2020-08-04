@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh xf86-video-intel picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k nodejs yarn rustup rust-analyzer-bin telegram-desktop qbittorrent tree)
+packages=(zsh xf86-video-intel picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k nodejs yarn rustup rust-analyzer-bin telegram-desktop qbittorrent tree alacritty dmenu)
 
 DOT_DIR=$(pwd)
 
