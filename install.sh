@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn rustup rust-analyzer-bin feh lxappearance telegram-desktop qbittorrent tree)
+packages=(zsh xf86-video-intel picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k nodejs yarn rustup rust-analyzer-bin telegram-desktop qbittorrent tree)
 
 DOT_DIR=$(pwd)
 
@@ -18,7 +18,7 @@ echo "Switching to zsh"
 [ $(echo $SHELL) != /bin/zsh ] && chsh -s /bin/zsh
 echo "Changed shell to zsh"
 
-sym=( .Xresources .zshrc .fonts .config/{i3,polybar,rofi,mpv,nvim} .p10k.zsh )
+sym=( .zshrc .fonts .config/{mpv,nvim} .p10k.zsh )
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 # Symlink after deleting existing
@@ -28,21 +28,6 @@ do
 	ln -s $(pwd)/$i $HOME/$i
 done
 
-# st
-git clone https://github.com/kryptiksage/st.git $HOME/.config/st || (cd $HOME/.config/st ; git pull)
-cd $HOME/.config/st
-echo "Installing st..."
-sudo make clean install
-[ -f $HOME/.zshenv ] && sed -i '/export TERMINAL*/d' $HOME/.zshenv
-echo TERMINAL=st >> $HOME/.zshenv
-sudo cp $DOT_DIR/st.desktop /usr/share/applications/
-
-# dwm
-git clone https://github.com/kryptiksage/dwm.git $HOME/.config/dwm || (cd $HOME/.config/dwm ; git pull)
-cd $HOME/.config/dwn
-echo "Installing dwn..."
-sudo make clean install
-
 ## neovim
 # rust
 rustup default stable
@@ -51,37 +36,8 @@ nvim +PlugInstall +"call coc#util#install()" +q +q
 cd $HOME/.config/nvim/plugged/coc.nvim ; yarn install
 nvim +"CocInstall coc-rust-analyzer" +q +q
 
-# Bluetooth
-chmod +x $HOME/.config/i3/bluet.sh
-
-# Switch default displays
-cp .xprofile $HOME/.xprofile
-echo -n "Switch to HDMI (y/n) : " 
-read display
-while true
-do
-	case $display in
-		y | Y)
-		echo export DISP_VAR='"$(xrandr --output eDP1 --off --output HDMI1 --primary)"' > $HOME/.xprofile
-		echo Display set to HDMI
-		break
-		;;
-		n | N)
-		echo Display set to default
-		break
-		;;
-	esac
-done
-source $HOME/.xprofile
-
 # Wallpaper
 mkdir $HOME/Pictures
 cp $(pwd)/wallpaper.jpg $HOME/Pictures/
-
-# Apply .Xresources
-xrdb .Xresources
-
-# i3
-i3-msg restart
 
 source $HOME/.zshrc 2>/dev/null
