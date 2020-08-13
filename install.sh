@@ -13,6 +13,9 @@ do
 	[ -z $(pacman -Qq $i 2>/dev/null) ] && sudo pacman -S --noconfirm $i 
 done
 
+# Set alacritty as default
+sudo ln -s /usr/bin/alacritty /usr/bin/x-terminal-emulator
+
 # zsh
 echo "Switching to zsh"
 [ $(echo $SHELL) != /bin/zsh ] && chsh -s /bin/zsh
