@@ -188,13 +188,13 @@ workspace 1 output primary
 
 assign [class="st"] 1
 assign [class="firefox"] 2
-assign [class="Thunar"] 3
+assign [class="Nautilus"] 3
 assign [class="vlc"] 4
 assign [class="code"] 5
 
 # Keyboard shortcuts
 bindsym $mod+Enter exec $term
-bindsym $mod+t exec thunar
+bindsym $mod+t exec nautilus
 bindsym $mod+f exec firefox
 bindsym $mod+Tab workspace back_and_forth
 
