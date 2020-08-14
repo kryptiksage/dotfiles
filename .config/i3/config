@@ -10,6 +10,7 @@
 set $term --no-startup-id $TERMINAL
 
 set $mod Mod1
+set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -231,3 +232,7 @@ bindsym $mod+b exec ~/.config/i3/bluet.sh
 # Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# Screen lock and sleep
+bindsym $sup+l exec ~/.config/i3/lock.sh
+exec xautolock -detectsleep -time 10 -locker "~/.config/i3/lock.sh"
