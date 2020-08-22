@@ -29,4 +29,5 @@ bindkey -v
 bindkey -v "^[[P" delete-char
 
 # Starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"

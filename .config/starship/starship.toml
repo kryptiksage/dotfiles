@@ -1,0 +1,6 @@
+# Avoid newline in the beginning
+add_newline = false
+
+[rust]
+symbol = " "
+format = "via [$symbol$version]($style)"
