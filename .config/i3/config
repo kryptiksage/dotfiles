@@ -187,7 +187,7 @@ exec --no-startup-id $DISP_VAR
 # Workspaces
 workspace 1 output primary
 
-assign [class="st"] 1
+assign [class="Alacritty"] 1
 assign [class="firefox"] 2
 assign [class="Nautilus"] 3
 assign [class="vlc"] 4
@@ -211,7 +211,7 @@ focus_follows_mouse no
 # i3-gaps
 gaps inner  5
 gaps outer  5
-gaps bottom 0
+gaps bottom 27
 # smart_gaps on
 
 # Polybar
@@ -224,7 +224,7 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 bindsym Print exec scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png
 
 # Compton
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 
 # Bluetooth
 bindsym $mod+b exec ~/.config/i3/bluet.sh
