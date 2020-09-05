@@ -1,249 +1,227 @@
-[bar/bottom]
-monitor = 
-bottom = true
-width = 100%
-height = 27
+;################## Color Scheme ####################
 
-background = #00000000
-foreground = #ccffffff
+[colors]
+background = #000000
+background-alt = #444
+foreground = #FFFFFF
+foreground-alt = #555
 
-line-color = ${root.background}
-line-size = 2
 
-spacing = 3
-padding-right = 4
+red         = ${xrdb:Polybar.color1}
+green       = ${xrdb:Polybar.color2}
+yellow      = ${xrdb:Polybar.color3}
+blue        = ${xrdb:Polybar.color4}
+magenta     = ${xrdb:Polybar.color5}
+cyan        = ${xrdb:Polybar.color6}
+white       = ${xrdb:Polybar.color7}
+
+; #################### Bar launcher #########################
+
+[bar/launcher]
+width = 2%
+height = 24px
+offset-x = 3.0%
+offset-y = 7px
+radius = 12.3
+fixed-center = true
+background = #FFFFFF
+foreground = ${colors.foreground}
+padding-left = 2
+padding-right = 0
 module-margin-left = 0
-module-margin-right = 6
+module-margin-right = 0
+font-0 = Material Design Icons:pixelsize=12:style:Solid;3
+font-1 = Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+modules-left = 
+modules-center = launcher
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
 
-font-0 = NotoSans-Regular:size=8;0
-font-1 = unifont:size=6;-3
-font-2 = FontAwesome 5 Free:style=Regular:size=8;-2
-font-3 = FontAwesome 5 Free:style=Solid:size=8;-2
-font-4 = FontAwesome 5 Brands:style=Regular:size=8;-2
-font-5 = NotoSans-Regular:size=8;-1
-font-6 = MaterialIcons:size=10;-1
-font-7 = Termsynu:size=8:antialias=false;0
+; #################### Bar songs #########################
 
-modules-left = i3
-modules-right = backlight pulseaudio wireless-network wired-network battery date powermenu
+[bar/songs]
+width = 18%
+height = 24px
+offset-x = 61.8% 
+offset-y = 7px
+radius = 0
+fixed-center = true
+background = #00000000
+foreground = #000000
+padding-left = 1
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+font-1 = Material Design Icons:pixelsize=14:style:Solid;5
+modules-left = 
+modules-center = song
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
 
-!! Tray icons
-tray-position = center
-tray-background = ${root.background}
-tray-padding = 0
+; #################### Bar player #########################
 
-[module/backlight]
-type = internal/xbacklight
-format = <ramp> <bar>
+[bar/player]
+width = 5%
+height = 24px
+offset-x = 16.5% 
+offset-y = 7px
+radius = 10
+fixed-center = true
+background = #FFFFFF
+foreground = #000000
+padding-left = 2
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 0
+;font-0 =  Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+font-0 = Material Design Icons:pixelsize=12:style:Solid;2.5
+modules-left = 
+modules-center = prev toggle next
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-font = 3
-bar-indicator-foreground = #ff
-bar-fill = ─
-bar-fill-font = 3
-bar-fill-foreground = #c9665e
-bar-empty = ─
-bar-empty-font = 3
-bar-empty-foreground = #44
+; #################### Bar Left #########################
 
-[module/battery]
-type = internal/battery
-full-at = 98
+[bar/left]
+width = 20%
+height = 24px
+offset-x = 5.5%
+offset-y = 7px
+radius = 10
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 2
+padding-right = 0
+module-margin-left = 1
+module-margin-right = 0
+;font-0 =  Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+font-0 = Material Design Icons:pixelsize=12:style:Solid;2
+font-1 = Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+modules-left = date cpu volume memory
+modules-center = 
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
 
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
+; ######################## Bar Center ########################
 
-ramp-capacity-0 = 
-ramp-capacity-0-foreground = #f53c3c
-ramp-capacity-1 = 
-ramp-capacity-1-foreground = #ffa900
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+[bar/center]
+width = 19%
+height = 24px
+offset-x = 40.2%
+offset-y = 7px
+radius = 10
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 2
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+font-0 = Fira Code Nerd Font :pixelsize=8;1
+font-1 = Material Design Icons:pixelsize=12:style:Solid;2
+font-2 = FontAwesome 5 Free:pixelsize=12;style:Solid;2
+modules-left =  
+modules-center = i3
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
 
-bar-capacity-width = 10
-bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
-bar-capacity-fill = █
-bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
-bar-capacity-empty = █
-bar-capacity-empty-font = 3
-bar-capacity-empty-foreground = #44ffffff
+; ###################### Bar power ########################
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
+[bar/right]
+width = 17%
+height = 24px
+offset-x = 80.%
+offset-y = 7px
+radius = 10
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 1
+padding-right = 3
+module-margin-left = 1
+module-margin-right = 0
+font-0 = Fira Code Nerd Font:pixelsize=8.7:style=Bold;1
+font-1 = Material Design Icons:pixelsize=12:style:Solid;2.6
+modules-right =  battery wlan power-menu 
+wm-restack = i3
+override-redirect = true
+cursor-click = pointer
+cursor-scroll = default
+bottom = true
+
+tray-position = left 
+tray-detached = true
+tray-maxsize = 11.5
+tray-transparent = false
+tray-background = #1A2026
+tray-scale = 0.98
+
+;#################### Modules ####################
 
 [module/i3]
+
 type = internal/i3
-index-sort = true
-enable-click = true
-enable-scroll = false
-fuzzy-match = true
-strip-wsnumbers = true
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4:= 5;
-ws-icon-default = 
+format = <label-state> <label-mode>
+wrapping-scroll = false
+strip-wsnumbers = false
 
-label-focused = %icon% %name%
-;label-focused-background = #3f3f3f
-label-focused-underline = #fba922
-label-focused-padding = 4
+ws-icon-0 = 1;󰞷
+ws-icon-1 = 2;󰈹
+ws-icon-2 = 3;󱂵
+ws-icon-3 = 4;󰕼
+ws-icon-4 = 5;󰨞
 
-label-unfocused = %icon% 
-label-unfocused-padding = 4
 
-label-visible = %icon% %name%
-label-separator = |
-label-separator-padding = 2
-label-separator-foreground = #ffb52a
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
 
-[module/cpu]
-type = internal/cpu
-interval = 0.5
-format = <label> <ramp-coreload>
-label = CPU
+label-mode-padding = 2
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background} ; focused = Active workspace on focused monitor label-focused = ""
+label-focused = %icon% 
+label-focused-padding = 1
+label-focused-font = 2
 
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
+; unfocused = Inactive workspace on any monitor
+;label-unfocused = ""
+label-unfocused = %icon%
+label-unfocused-padding = 1
+label-unfocused-font = 2
+
+; urgent = Workspace with urgency hint set
+;label-urgent = ""
+;label-urgent-foreground = #c44dff
+;label-urgent-font = 3
+;label-urgent-padding = 1
 
 [module/date]
 type = internal/date
-date =    %%{F#99}%a  %Y-%m-%d %%{F-}  %%{F#fff}%I:%M %p%%{F-}
+date = 󰸗 %%{F#99}%a %Y-%m-%d %%{F-} %%{F#fff}%I:%M %p%%{F-}
 
-[module/memory]
-type = internal/memory
-format = <label> <bar-used>
-label = RAM
-
-bar-used-width = 30
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
-bar-used-indicator = |
-bar-used-indicator-font = 6
-bar-used-indicator-foreground = #ff
-bar-used-fill = ─
-bar-used-fill-font = 6
-bar-used-empty = ─
-bar-used-empty-font = 6
-bar-used-empty-foreground = #444444
-
-[module/mpd]
-type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
-
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-random = 
-icon-repeat = 
-
-toggle-on-foreground =
-toggle-off-foreground = #55
-
-bar-progress-width = 45
-bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
-bar-progress-indicator = |
-bar-progress-indicator-foreground = #ff
-bar-progress-indicator-font = 3
-bar-progress-fill = ─
-bar-progress-fill-foreground = #bb
-bar-progress-fill-font = 3
-bar-progress-empty = ─
-bar-progress-empty-font = 3
-bar-progress-empty-foreground = #44
-
-[module/wireless-network]
-type = internal/network
-interface = ${env:WLAN}
-interval = 3.0
-ping-interval = 10
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-label-disconnected =    not connected
-label-disconnected-foreground = #66
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-
-animation-packetloss-0 = 
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
-animation-packetloss-1-foreground = ${bar/bottom.foreground}
-animation-packetloss-framerate = 500
-
-[module/wired-network]
-type = internal/network
-interface = ${env:ETH}
-interval = 3.0
-
-label-connected =    %{T3}%local_ip%%{T-}
-label-disconnected-foreground = #66
-
-[module/pulseaudio]
-type = internal/pulseaudio
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 9
-
-format-volume = <ramp-volume> <label-volume>
-label-muted =   muted
-label-muted-foreground = #66
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-
-[module/powermenu]
+[module/power-menu]
 type = custom/menu
 
-format-padding = 5
-
-label-open = 
-label-close = 
+format-foreground =#800000
+label-open = 󰐥
+label-close = 󰅖
 label-separator = |
 
 menu-0-0 = Power off
@@ -256,6 +234,148 @@ menu-0-2 = Logout
 menu-0-2-foreground = #00ff00
 menu-0-2-exec = i3-msg exit
 
-; vim:ft=dosini
+
+[module/volume]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume><label-volume>
+label-volume-foreground = ${colors.foreground}
+format-foreground = #333333
+
+label-muted = "󰝟"
+label-muted-foreground = #607290
+
+ramp-volume-0 = 󰕿
+ramp-volume-1 = 󰖀
+ramp-volume-2 = 󰕾
+
+[module/cpu]
+type = internal/cpu
+
+interval = 2
+format = <label>
+
+format-prefix = "󰍛 " 
+label = "%{T2}%percentage%%%{T2} "
+label-foreground = ${colors.foreground} 
+format-foreground = #007A99
 
 
+[module/memory]
+type = internal/memory
+
+interval = 2
+format-prefix = "󰮯 "
+label = "%{T2}%percentage_used%%%{T-} " 
+label-foreground = ${colors.foreground}
+format-foreground =#AC3973
+
+
+[module/launcher]
+type = custom/text
+
+content = "%{T4} 󰛝 %{T-}"
+content-background = ${colors.background}
+content-foreground = #333333
+content-padding = 1
+content-font = 2
+click-left = rofi -show drun -eh 2 -bw 0 &
+
+[module/battery]
+type = internal/battery
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging>%{T3}<label-charging>%{T-}
+
+format-discharging =<ramp-capacity>%{T3}<label-discharging>%{T-} 
+
+format-full = 󰂄%{T3}100%%{T-}
+format-full-foreground = #009933
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
+
+animation-charging-0 = 󰢜
+animation-charging-1 = 󰢝
+animation-charging-2 = 󰂅
+animation-charging-foreground = #009933
+animation-charging-framerate = 900
+
+ramp-capacity-0 = %{F#FF004B}󰂃%{F-}
+ramp-capacity-1 = %{F#FF8000}󰁺%{F-}
+ramp-capacity-2 = %{F#FF8000}󰁻%{F-}
+ramp-capacity-3 = %{F#FF8000}󰁼%{F-}
+ramp-capacity-4 = 󰁽
+ramp-capacity-5 = 󰁾
+ramp-capacity-6 = 󰁿
+ramp-capacity-7 = 󰂀
+ramp-capacity-8 = 󰂁
+ramp-capacity-9 = 󰂂
+ramp-capacity-10 = 󰁹 
+ramp-capacity-foreground = #009933
+ramp-capacity-framerate = 750
+
+[module/wl]
+
+
+type = custom/script
+exec = echo " 󰤢 "
+format-foreground = #0t08060
+click-left = /home/eloy/Downloads/sc/network.sh &
+
+
+[module/prev]
+type = custom/script
+exec = echo "%{T5}󰒮 %{T-}" &
+format = "%{F#e65c00}<label>%{F-}"
+interval = 600
+tail = true
+
+click-left = playerctl --player=spotify previous &
+
+
+[module/toggle]
+type = custom/script
+exec = [[ "$(playerctl -p spotify status 2>/dev/null)" == "Playing" ]] && echo "󰏦" || echo "󰐌"
+interval = 0.2
+format = "%{F#000000}<label>%{F-}"
+tail = true
+click-left = playerctl --player=spotify play-pause &
+
+
+[module/next]
+type = custom/script
+exec = echo "%{T5}󰒭 %{T-}" &
+format = "%{F#e65c00}<label>%{F-}"
+interval = 600
+
+tail = true
+click-left = playerctl --player=spotify next &
+
+[module/song]
+type = custom/script
+exec = /home/eloy/Downloads/sc/song.sh 2>/dev/null || echo "No player found"
+format = "<label>  "
+format-prefix = "%{F#FFFFFF} 󰓇  %{F-}"
+format-background = #00000000 
+interval = 7
+format-foreground = #FFFFFF
+
+tail = true
+
+[module/wlan]
+type = internal/network
+interface = ${env:WLAN}
+interval = 6.0
+
+format-connected = <ramp-signal><label-connected>
+label-connected = %essid%
+label-disconnected =    not connected
+label-disconnected-foreground = #6c809e
+
+ramp-signal-0 = %{F#ff9999}󰤫%{F-}
+ramp-signal-1 = %{F#ff9999}󰤟%{F-}
+ramp-signal-2 =  󰤨
+ramp-signal-3 =  󰤨
+ramp-signal-4 =  󰤨
+ramp-signal-foreground = ${colors.foreground}
