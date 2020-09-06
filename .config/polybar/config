@@ -1,9 +1,9 @@
 ;################## Color Scheme ####################
 
 [colors]
-background = ${xrdb:Polybar.background}
+background = ${xrdb:Polybar.foreground}
 background-alt = #444
-foreground = ${xrdb:Polybar.foreground}
+foreground = ${xrdb:Polybar.background}
 foreground-alt = #555
 
 
@@ -196,9 +196,12 @@ ws-icon-4 = 5;󰨞
 label-mode-padding = 2
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.background} ; focused = Active workspace on focused monitor label-focused = ""
+
 label-focused = %icon% 
 label-focused-padding = 1
 label-focused-font = 2
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
 
 ; unfocused = Inactive workspace on any monitor
 ;label-unfocused = ""
@@ -214,7 +217,7 @@ label-unfocused-font = 2
 
 [module/date]
 type = internal/date
-date = 󰸗 %%{F#99}%a %Y-%m-%d %%{F-} %%{F#fff}%I:%M %p%%{F-}
+date = 󰸗 %%{F#99}%a %Y-%m-%d %%{F-} %%{F#99}%I:%M %p%%{F-}
 
 [module/power-menu]
 type = custom/menu
