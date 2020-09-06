@@ -169,10 +169,10 @@ bottom = true
 
 tray-position = left 
 tray-detached = true
-tray-maxsize = 11.5
+tray-maxsize = 14
 tray-transparent = false
-tray-background = #1A2026
-tray-scale = 0.98
+;tray-background = #1A2026
+tray-scale = 1
 
 ;#################### Modules ####################
 
@@ -222,7 +222,7 @@ date = 󰸗 %%{F#99}%a %Y-%m-%d %%{F-} %%{F#99}%I:%M %p%%{F-}
 [module/power-menu]
 type = custom/menu
 
-format-foreground =#800000
+format-foreground = ${colors.red}
 label-open = 󰐥
 label-close = 󰅖
 label-separator = |
