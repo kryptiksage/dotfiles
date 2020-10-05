@@ -16,6 +16,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Rust
 Plug 'neoclide/coc.nvim'
 Plug 'rust-lang/rust.vim'
+
+" Toml
+Plug 'cespare/vim-toml'
 call plug#end()
 
 set termguicolors
