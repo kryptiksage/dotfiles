@@ -22,7 +22,7 @@ Plug 'cespare/vim-toml'
 call plug#end()
 
 set termguicolors
-let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_dark='hard'
 let ayucolor="mirage"
 colorscheme ayu
 
