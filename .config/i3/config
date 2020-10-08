@@ -205,6 +205,9 @@ hide_edge_borders both
 new_window none
 new_float none
 
+# Sticky
+bindsym $mod+Shift+s sticky toggle
+
 # Focus
 focus_follows_mouse no
 
