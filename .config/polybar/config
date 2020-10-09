@@ -1,3 +1,4 @@
+# vi:syntax=dosini
 [colors]
 nord0 = #2e3440
 nord3 = #4c566a
