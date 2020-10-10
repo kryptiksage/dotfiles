@@ -242,7 +242,7 @@ label-urgent-padding = 1
 [module/update]
 type = custom/script
 
-exec = ~/.scripts/update.sh
+exec = ~/.scripts/update
 
 format = <label>
 format-foreground = ${colors.nord8}
@@ -250,4 +250,4 @@ format-underline = ${colors.nord8}
 
 label = %output%
 
-interval = 300
+interval = 600
