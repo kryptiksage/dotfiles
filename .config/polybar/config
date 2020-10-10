@@ -40,7 +40,7 @@ font-1 = "FiraCode Nerd Font:size=10;1"
 font-2 = "FiraCode Nerd Font:size=10;1"
 font-3 = "Material Design Icons:size=10;1"
 
-modules-left = date i3 xwindow
+modules-left = update date i3 xwindow
 modules-center =
 modules-right = pulseaudio backlight eth1 wlan memory battery powermenu
 
@@ -238,3 +238,16 @@ label-urgent = %icon%
 label-urgent-foreground = #ffffff
 label-urgent-background = #bd2c40
 label-urgent-padding = 1
+
+[module/update]
+type = custom/script
+
+exec = ~/.scripts/update.sh
+
+format = <label>
+format-foreground = ${colors.nord8}
+format-underline = ${colors.nord8}
+
+label = %output%
+
+interval = 300
