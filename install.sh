@@ -1,6 +1,6 @@
 #!/bin/sh
 
-packages=(zsh xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn rustup rust-analyzer-bin feh lxappearance telegram-desktop qbittorrent tree alacritty spotifyd)
+packages=(zsh xf86-video-intel i3-gaps i3blocks i3lock i3status dmenu rofi picom reflector zsh-autosuggestions zsh-syntax-highlighting firefox code bluez bluez-utils pulseaudio-bluetooth zsh-theme-powerlevel10k mupdf nodejs yarn rustup rust-analyzer-bin feh lxappearance telegram-desktop qbittorrent tree alacritty spotifyd dunst)
 
 DOT_DIR=$(pwd)
 
@@ -21,7 +21,7 @@ echo "Switching to zsh"
 [ $(echo $SHELL) != /bin/zsh ] && chsh -s /bin/zsh
 echo "Changed shell to zsh"
 
-sym=( .Xresources .zshrc .fonts .config/{i3,polybar,rofi,mpv,nvim,alacritty,spotify-tui/config.yml} .p10k.zsh )
+sym=( .Xresources .zshrc .fonts .config/{i3,polybar,rofi,mpv,nvim,alacritty,spotify-tui/config.yml,dunst} .p10k.zsh )
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
 # Symlink after deleting existing
