@@ -241,7 +241,7 @@ label-urgent-padding = 1
 [module/update]
 type = custom/script
 
-exec = ~/.scripts/update
+exec = ~/.scripts/update 2>/dev/null
 
 format = <label>
 format-foreground = ${colors.nord8}
