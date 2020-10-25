@@ -237,5 +237,5 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Screen lock and sleep
-bindsym $sup+l exec ~/.config/i3/lock.sh
-exec xautolock -detectsleep -time 10 -locker "~/.config/i3/lock.sh"
+bindsym $sup+l exec ~/.scripts/lock.sh
+exec_always --no-startup-id ~/.scripts/auto_lock.sh
