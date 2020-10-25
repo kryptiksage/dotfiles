@@ -3,6 +3,7 @@
 nord0 = #2e3440
 nord3 = #4c566a
 nord4 = #d8dee9
+nord7 = #8fbcbb
 nord8 = #88c0d0
 nord10 = #5e81ac
 nord11 = #bf616a
@@ -42,7 +43,7 @@ font-3 = "Material Design Icons:size=10;1"
 
 modules-left = update date i3 xwindow
 modules-center =
-modules-right = pulseaudio backlight eth1 wlan memory battery powermenu
+modules-right = mx-master pulseaudio backlight eth1 wlan memory battery powermenu
 
 tray-position = right
 tray-padding = 2
@@ -250,3 +251,17 @@ format-underline = ${colors.nord8}
 label = %output%
 
 interval = 600
+
+[module/mx-master]
+type = custom/script
+
+exec = ~/.scripts/mx-master 2>/dev/null
+
+format = <label>
+format-foreground = ${colors.nord7}
+format-underline = ${colors.nord7}
+
+label = %output%
+
+interval = 900
+
