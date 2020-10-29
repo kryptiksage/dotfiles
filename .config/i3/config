@@ -239,3 +239,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Screen lock and sleep
 bindsym $sup+l exec ~/.scripts/lock.sh
 exec_always --no-startup-id ~/.scripts/auto_lock.sh
+
+# Move workspace btw displays
+bindsym $mod+o move workspace to output left
+bindsym $mod+p move workspace to output right
+
+# Xrandr for multimonitor setup
+exec_always --no-startup-id xrandr --output HDMI1 --primary --output eDP1 --left-of HDMI1
