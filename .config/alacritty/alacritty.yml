@@ -1,6 +1,6 @@
 # Font
 font:
-        size: 9.5
+        size: 12.5
         normal:
                 family: MesloLGS NF
                 style: Regular
@@ -53,3 +53,6 @@ colors:
     magenta: '#75617b'
     cyan:    '#5b7d78'
     white:   '#828482'
+
+env: 
+        TERM: xterm-256color
