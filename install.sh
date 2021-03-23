@@ -16,4 +16,11 @@ echo "Shell changed to zsh"
 
 # Symlink 
 sym=(.config/{alacritty,nvim,sway,waybar} .fonts .p10k.zsh .zshrc)
-
+for i in "${sym[@]}"
+do
+	if [ -e $i ]
+	then
+		rm -rf $HOME/$i
+		ln -s $PWD/$i $HOME/$i
+	fi
+done
