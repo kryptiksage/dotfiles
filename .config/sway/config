@@ -239,3 +239,6 @@ exec_always --no-startup-id [ $(swaymsg -t get_outputs | grep -c HDMI) -e 0 ] ||
 
 # Notification
 exec mako
+
+# Sticky windows
+bindsym $mod+Shift+s sticky toggle
