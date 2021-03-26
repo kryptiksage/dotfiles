@@ -1,7 +1,7 @@
 max-visible=5
-font=FiraCode Nerd Font 12
+font=FiraCode Nerd Font 11
 
 background-color=#2e3440
 text-color=#eceff4
 border-color=#88c0d0
-border-size=10
+border-size=7
