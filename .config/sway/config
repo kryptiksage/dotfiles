@@ -209,7 +209,7 @@ include /etc/sway/config.d/*
 assign [class="alacritty"] 1
 assign [class="firefox"] 2
 assign [class="nautilus"] 3
-assign [class="code"] 5
+assign [class="code"] 3
 
 # Shortcuts
 bindsym $mod+t exec nautilus
