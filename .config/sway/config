@@ -243,4 +243,5 @@ exec mako
 # Sticky windows
 bindsym $mod+Shift+s sticky toggle
 
+# Testing
 for_window [app_id="screen-tube"] fullscreen enable
