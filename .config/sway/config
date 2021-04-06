@@ -235,7 +235,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Display
-exec_always --no-startup-id [ $(swaymsg -t get_outputs | grep -c HDMI) -e 0 ] || swaymsg output eDP-1 disable
+exec_always --no-startup-id [ $(swaymsg -t get_outputs | grep -c HDMI) -eq 0 ] || swaymsg output eDP-1 disable
 
 # Notification
 exec mako
