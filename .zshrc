@@ -30,7 +30,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias ls="ls -a --color=auto"
 alias ...="cd ../.."
 alias rank-mirrors="sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syy"
-alias wifi="nmcli device wifi connect"
+alias wifi="nmcli device wifi"
 alias poweroff="poweroff 2> /dev/null || sudo systemctl poweroff"
 
 # vi mode
