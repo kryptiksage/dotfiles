@@ -6,7 +6,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Color scheme
-Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 
 " vim-airline
@@ -19,7 +18,6 @@ Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set termguicolors
-let g:gruvbox_contrast_dark='hard'
 let ayucolor="mirage"
 colorscheme ayu
 
