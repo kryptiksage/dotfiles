@@ -90,11 +90,12 @@ output * bg ~/Pictures/wallpaper.jpg fill
     bindsym $mod+$down focus down
     
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+
+    # Move workspace to display
+    bindsym $mod+Left move workspace to left 
+    bindsym $mod+Down move workspace to down
+    bindsym $mod+Up move workspace to up
+    bindsym $mod+Right move workspace to right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
