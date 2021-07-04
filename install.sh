@@ -11,7 +11,7 @@ done
 
 # Zsh
 echo "Changing Shell"
-[[ "$SHELL" == *"zsh"* ]] && chsh -s /bin/zsh
+[[ "$SHELL" == *"zsh"* ]] || chsh -s /bin/zsh
 echo "Shell changed to zsh"
 
 # Symlink 
