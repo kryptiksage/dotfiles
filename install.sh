@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Package List
-packages=(alacritty bluez bluez-utils firefox grim kdeconnect pulseaudio-bluetooth qbittorrent reflector sway telegram-desktop waybar wdisplays zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
+packages=(alacritty bluez bluez-utils firefox grim kdeconnect pulseaudio-bluetooth qbittorrent reflector slurp sway telegram-desktop waybar wdisplays zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
 
 # Package Install
 for i in "${packages[@]}"
