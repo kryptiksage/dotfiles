@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Package List
-packages=(alacritty bluez bluez-utils exa firefox grim kdeconnect pulseaudio-bluetooth qbittorrent reflector slurp sway telegram-desktop waybar wdisplays zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
+packages=(alacritty bluez bluez-utils exa firefox grim kdeconnect nodejs pulseaudio-bluetooth qbittorrent reflector rustup rust-analyzer slurp sway telegram-desktop waybar wdisplays yarn zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
 
 # Package Install
 for i in "${packages[@]}"
@@ -29,3 +29,6 @@ done
 [ ! -e ~/Pictures/wallpaper.jpg ] || rm -rf ~/Pictures/wallpaper.jpg
 [ -e ~/Pictures ] || mkdir ~/Pictures
 ln -s $PWD/wallpaper.jpg ~/Pictures/wallpaper.jpg
+
+# Rust
+
