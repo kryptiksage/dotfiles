@@ -31,4 +31,4 @@ done
 ln -s $PWD/wallpaper.jpg ~/Pictures/wallpaper.jpg
 
 # Rust
-
+rustup toolchain install stable
