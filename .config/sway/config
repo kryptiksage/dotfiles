@@ -250,3 +250,7 @@ for_window [app_id="screen-tube"] fullscreen enable
 # Brightness
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
+
+# KDE Connect
+exec --no-startup-id /usr/lib/kdeconnectd
+exec kdeconnect-indicator
