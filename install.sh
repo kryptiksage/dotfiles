@@ -34,6 +34,6 @@ ln -s $PWD/wallpaper.jpg ~/Pictures/wallpaper.jpg
 rustup toolchain install stable
 
 # Time
-sudo systemctl --now enable ntps.service
+sudo systemctl --now enable systemd-timesyncd.service
 timedatectl set-timezone Asia/Kolkata
 sudo hwclock --systohc
