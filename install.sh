@@ -32,3 +32,8 @@ ln -s $PWD/wallpaper.jpg ~/Pictures/wallpaper.jpg
 
 # Rust
 rustup toolchain install stable
+
+# Time
+sudo systemctl --now enable ntps.service
+timedatectl set-timezone Asia/Kolkata
+sudo hwclock --systohc
