@@ -6,7 +6,7 @@ ORANGE='\033[0;33m'
 GREEN='\033[0;32m'
 
 # Package List
-packages=(alacritty bat bluez bluez-utils exa firefox grim kdeconnect nodejs pulseaudio-bluetooth qbittorrent reflector rustup rust-analyzer slurp sway telegram-desktop waybar wdisplays yarn zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
+packages=(alacritty bat bluez bluez-utils exa firefox grim kdeconnect nodejs pulseaudio-bluetooth qbittorrent reflector rustup rust-analyzer slurp sway telegram-desktop waybar wdisplays yarn zathura zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-theme-powerlevel10k)
 
 # Package Install
 echo "${ORANGE}Installing packages${NOCOLOR}"
