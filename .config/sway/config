@@ -262,3 +262,5 @@ bindsym $mod+Shift+p exec  grim -g $(swaymsg -t get_tree | jq -j '.. | select(.t
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 bindsym Shift+Print exec grim
 
+# Polkit
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
