@@ -5,6 +5,8 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+" fzf
+
 " Color scheme
 Plug 'ayu-theme/ayu-vim'
 
